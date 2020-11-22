@@ -1,7 +1,7 @@
 {
   "name": "questions-project",
   "version": "1.0.0",
-  "description": "Questions",
+  "description": "Золотой ключик или приключения Буратино - правовой познавательный тест",
   "main": "app.js",
   "scripts": {
     "start": "http-server -c-1",
@@ -58,7 +58,7 @@
     "win": {
       "target": "portable",
       "legalTrademarks": "WSV",
-      "publisherName": "Questions"
+      "publisherName": "Золотой ключик или приключения Буратино - правовой познавательный тест"
     },
     "linux": {
       "target": "appimage",
