@@ -58,6 +58,7 @@
     "win": {
       "target": "portable",
       "legalTrademarks": "WSV",
+      "icon": "favicon.ico",
       "publisherName": "Золотой ключик или приключения Буратино - правовой познавательный тест"
     },
     "linux": {
