@@ -8,7 +8,7 @@ interface IProps {
 }
 
 export const MainComponent: FC<IProps> = ({ questsions }) => {
-  const [qIndex, setQIndex] = useState(10)
+  const [qIndex, setQIndex] = useState(0)
   const nowQuest = questsions[qIndex]
   const [select, setSelect] = useState(-1)
   const [message, setMessage] = useState('')
