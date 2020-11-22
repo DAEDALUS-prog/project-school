@@ -1,13 +1,10 @@
 import { join } from "path";
 import { Configuration } from "webpack";
 
-const { argv, env } = process
+const {  env } = process
 
-const testArg = (arg: string) =>
-  argv.indexOf(arg) !== -1
-
-const devMode = false
-const watchMode = testArg('--watch')
+const devMode = env.NODE_ENV != 'prod'
+const watchMode = devMode
 
 const mode = env.NODE_ENV = devMode ?
   'development' : 'production'
