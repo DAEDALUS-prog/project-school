@@ -1,24 +1,29 @@
 {
   "name": "questions-project",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "description": "Questions",
+  "main": "app.js",
   "scripts": {
-    "start": "http-server",
-    "build": "webpack"
+    "start": "http-server -c-1",
+    "start-dev": "http-server -c-1 | webpack",
+    "start-electron": "electron .",
+    "build": "NODE_ENV=prod webpack",
+    "build-dev": "webpack",    
+    "build-windows": "electron-builder install-app-deps & electron-builder -w",
+    "build-linux": "electron-builder install-app-deps & electron-builder -l",
+    "build-mac": "electron-builder install-app-deps & electron-builder -m"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "electron": "~11.0.2",
     "@types/node": "~14.14.9",
     "@types/react": "~17.0.0",
     "@types/react-dom": "~17.0.0",
     "@types/webpack": "~4.41.25",
     "css-loader": "~5.0.1",
+    "electron-builder": "~22.9.1",
     "file-loader": "~6.2.0",
     "http-server": "~0.12.3",
     "sass": "~1.29.0",
@@ -30,5 +35,37 @@
     "url-loader": "~4.1.1",
     "webpack": "~5.6.0",
     "webpack-cli": "~4.2.0"
+  },
+  "build": {
+    "appId": "com.wsv.questions",
+    "productName": "Questions",
+    "copyright": "WSV",
+    "files": [
+      "dist/main.js",
+      "images",
+      "vendor/react/min.js",
+      "vendor/react-dom/min.js",
+      "app.js",
+      "index.html",
+      "favicon.ico"
+    ],
+    "directories": {
+      "output": "./build"
+    },
+    "mac": {
+      "target": "zip"
+    },
+    "win": {
+      "target": "portable",
+      "legalTrademarks": "WSV",
+      "publisherName": "Questions"
+    },
+    "linux": {
+      "target": "appimage",
+      "maintainer": "WSV",
+      "category": "Network",
+      "description": "Questions for Linux",
+      "executableName": "Questions"
+    }
   }
 }
