@@ -5,6 +5,7 @@ import { MainComponent } from "./components/Main";
 import "./index.sass";
 import { loadQuestions } from "./lib/loadQuestions";
 
+
 const app = document.getElementById('app')
 
 async function main() {
