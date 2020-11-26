@@ -39,6 +39,7 @@
   "build": {
     "appId": "com.wsv.questions",
     "productName": "Questions",
+    "icon": "favicon.ico",
     "copyright": "WSV",
     "files": [
       "dist/main.js",
